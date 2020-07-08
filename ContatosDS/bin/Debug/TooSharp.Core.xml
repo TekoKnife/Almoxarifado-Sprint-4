@@ -1,0 +1,1256 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TooSharp.Core</name>
+    </assembly>
+    <members>
+        <member name="M:TooSharp.Connection.BeginTransaction">
+            <summary>
+            Begins the transaction.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.Connection.RunTransaction(System.Collections.Generic.List{System.String})">
+            <summary>
+            Runs the transaction.
+            </summary>
+            <param name="QueryArray">The query array.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.Connection.#ctor(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:TooSharp.Connection"/> class.
+        Initializes a new instance of the  class.
+            </summary>
+            <param name="database_name">Name of the database.</param>
+            <param name="host">The host.</param>
+            <param name="user">The user.</param>
+            <param name="password">The password.</param>
+            <param name="port">The port.</param>
+        </member>
+        <member name="M:TooSharp.Connection.Finalize">
+            <summary>
+            Finalizes an instance of the <see cref="T:TooSharp.Connection"/> class.
+        Finalizes an instance of the  class.
+            </summary>
+        </member>
+        <member name="M:TooSharp.Connection.GetConnection">
+            <summary>
+            Gets the connection instance.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.Connection.GetAll(System.String)">
+            <summary>
+            Gets all cells.
+            </summary>
+            <param name="SqlCommand">The SQL command.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.Connection.GetAll(System.Windows.Forms.DataGridView,System.String)">
+            <summary>
+            Gets all cells.
+            </summary>
+            <param name="Target">The target.</param>
+            <param name="Where">The where.</param>
+        </member>
+        <member name="M:TooSharp.Connection.GetCell(System.String,System.Boolean)">
+            <summary>
+            Gets the cell Value.
+            </summary>
+            <param name="query">The query.</param>
+            <param name="isNumber">if set to <c>true</c> [is number].
+        if set to  [is number].</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.Connection.GetResults(System.Int32,System.String)">
+            <summary>
+            Gets the results.
+            </summary>
+            <param name="ROW">The row.</param>
+            <param name="COLUMN_NAME">Name of the column.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.Connection.GetResults(System.Int32,System.Int32)">
+            <summary>
+            Gets the results.
+            </summary>
+            <param name="ROW">The row.</param>
+            <param name="COLUMN_NAME">Name of the column.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.Connection.OpenConnection">
+            <summary>
+            Opens the connection.
+            </summary>
+        </member>
+        <member name="M:TooSharp.Connection.CloseConnection">
+            <summary>
+            Closes the connection.
+            </summary>
+        </member>
+        <member name="M:TooSharp.Connection.ExecuteNonQuery(System.String)">
+            <summary>
+            Executes the non query.
+            </summary>
+            <param name="sql_comm">The SQL comm.</param>
+        </member>
+        <member name="M:TooSharp.Connection.CellEnter_Event(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+            <summary>
+            Handles the Event event of the CellEnter control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.Forms.DataGridViewCellEventArgs"/> instance containing the event data.
+        The  instance containing the event data.</param>
+        </member>
+        <member name="M:TooSharp.Connection.CellEndEdit_Event(System.Object,System.Windows.Forms.DataGridViewCellEventArgs,System.String,System.Int32)">
+            <summary>
+            Cells the end edit event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.Windows.Forms.DataGridViewCellEventArgs"/> instance containing the event data.
+        The  instance containing the event data.</param>
+            <param name="Tablename">The tablename.</param>
+            <param name="PKcolumn">The p kcolumn.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.Connection.UserDeletingRow_Event(System.Object,System.Windows.Forms.DataGridViewRowCancelEventArgs,System.String,System.Int32)">
+            <summary>
+            Users the deleting row event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.Windows.Forms.DataGridViewRowCancelEventArgs"/> instance containing the event data.
+        The  instance containing the event data.</param>
+            <param name="Table_name">Name of the table.</param>
+            <param name="PKcolumn">The p kcolumn.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.isTable(System.Object)">
+            <summary>
+            Determines whether the specified value is table.
+            </summary>
+            <param name="val">The value.</param>
+            <returns>
+              <c>truefalse</c> if the specified value is table; otherwise, <c>false</c>.
+        if the specified value is table; otherwise, .
+            </returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.GetFullColumn(System.Object)">
+            <summary>
+            Gets the full column.
+            </summary>
+            <param name="val">The value.</param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:TooSharp.DbFunctions.SPACE(System.Object)" -->
+        <member name="M:TooSharp.DbFunctions.TRIM(System.Object)">
+            <summary>
+            Removes leading and trailing spaces from a string
+            </summary>
+            <param name="val">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.UCASE(System.Object)">
+            <summary>
+            The UCASE() function converts a string to upper-case.
+            </summary>
+            <param name="val">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.UPPER(System.Object)">
+             <summary>
+            The UPPER() function converts a string to upper-case.
+             </summary>
+             <param name="val">The value.</param>
+             <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.ASCII(System.Object,System.String)">
+            <summary>
+            Returns the ASCII value for the specific character
+            </summary>
+            <param name="val">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.ABS(System.Object,System.String)">
+            <summary>
+            The ABS() function returns the absolute (positive) value of a number.
+            </summary>
+            <param name="val">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.ACOS(System.Object,System.String)">
+            <summary>
+             Return the arc cosine of a number
+            </summary>
+            <param name="val">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.ASIN(System.Object,System.String)">
+            <summary>
+            Return the arc sine of a number:
+            </summary>
+            <param name="val">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.ATAN(System.Object,System.String)">
+            <summary>
+            Return the arc tangent of a number:
+            </summary>
+            <param name="val">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.NOW(System.String)">
+            <summary>
+            The NOW() function returns the current date and time.
+            </summary>
+            <param name="val">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.LAST_INSERT_ID(System.String)">
+            <summary>
+            The LAST_INSERT_ID() function returns the AUTO_INCREMENT id of the last row that has been inserted or updated in a table.
+            </summary>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.CURRENT_USER(System.String)">
+            <summary>
+            The CURRENT_USER() function returns the user name and host name for the MySQL account that the server used to authenticate the current client.
+            </summary>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.SESSION_USER(System.String)">
+            <summary>
+             The SESSION_USER() function returns the current user name and host name for the MySQL connection.
+            </summary>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.SYSTEM_USER(System.String)">
+            <summary>
+             The SYSTEM_USER() function returns the current user name and host name for the MySQL connection.
+            </summary>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.USER(System.String)">
+            <summary>
+            The USER() function returns the current user name and host name for the MySQL connection.
+            </summary>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.VERSION(System.String)">
+             <summary>
+            The VERSION() function returns the current version of the MySQL/Maria database, as a string.
+             </summary>
+             <param name="Alias">The alias.</param>
+             <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.DATABASE(System.String)">
+            <summary>
+             The DATABASE() function returns the name of the current database.
+            </summary>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.CONNECTION_ID(System.String)">
+            <summary>
+             The CONNECTION_ID() function returns the unique connection ID for the current connection.
+            </summary>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.SECOND(System.Object,System.String)">
+            <summary>
+            The SECOND() function returns the seconds part of a time/datetime (from 0 to 59).
+            </summary>
+            <param name="val">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.SEC_TO_TIME(System.Object,System.String)">
+             <summary>
+            The SEC_TO_TIME() function returns a time value (in format HH:MM:SS) based on the specified seconds.
+             </summary>
+             <param name="val">The value.</param>
+             <param name="Alias">The alias.</param>
+             <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.CEIL(System.Object,System.String)">
+            <summary>
+            The CEIL() function returns the smallest integer value that is bigger than or equal to a number.
+            </summary>
+            <param name="val">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.CEILING(System.Object,System.String)">
+            <summary>
+            The CEILING() function returns the smallest integer value that is bigger than or equal to a number.
+            </summary>
+            <param name="val">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.COS(System.Object,System.String)">
+            <summary>
+            Return the cosine of a number:
+            </summary>
+            <param name="val">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.COT(System.Object,System.String)">
+            <summary>
+            Return the cotangent of a number:
+            </summary>
+            <param name="val">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.COUNT(System.Object,System.String)">
+            <summary>
+            The COUNT() function returns the number of records returned by a select query.
+            </summary>
+            <param name="val">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.DEGREES(System.Object,System.String)">
+            <summary>
+            Convert the radian value into degrees:
+            </summary>
+            <param name="val">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.EXP(System.Object,System.String)">
+            <summary>
+            The EXP() function returns e raised to the power of the specified number.
+            </summary>
+            <param name="val">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.FLOOR(System.Object,System.String)">
+            <summary>
+            The FLOOR() function returns the largest integer value that is smaller than or equal to a number.
+            </summary>
+            <param name="val">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.LN(System.Object,System.String)">
+             <summary>
+            The LN() function returns the natural logarithm of a number.
+             </summary>
+             <param name="val">The value.</param>
+             <param name="Alias">The alias.</param>
+             <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.LOG(System.Object,System.String)">
+            <summary>
+            The LOG() function returns the natural logarithm of a specified number, or the logarithm of the number to the specified base.
+            </summary>
+            <param name="val">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.LOG10(System.Object,System.String)">
+             <summary>
+            The LOG10() function returns the natural logarithm of a number to base-10.
+             </summary>
+             <param name="val">The value.</param>
+             <param name="Alias">The alias.</param>
+             <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.MAX(System.Object,System.String)">
+            <summary>
+            The MAX() function returns the maximum value in a set of values.
+            </summary>
+            <param name="val">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.MIN(System.Object,System.String)">
+            <summary>
+            The MIN() function returns the minimum value in a set of values.
+            </summary>
+            <param name="val">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.CURDATE(System.String)">
+            <summary>
+            Return the current date:
+            </summary>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.CURRENT_DATE(System.String)">
+            <summary>
+            Return the current date:
+            </summary>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.CURRENT_TIME(System.String)">
+            <summary>
+            The CURRENT_TIME() function returns the current time.
+             Note: The time is returned as "HH-MM-SS" (string) or as HHMMSS.uuuuuu(numeric).
+            </summary>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.LOCALTIME(System.String)">
+            <summary>
+            The LOCALTIME() function returns the current date and time.
+            </summary>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.LOCALTIMESTAMP(System.String)">
+            <summary>
+            The LOCALTIMESTAMP() function returns the current LOCALTIMESTAMP.
+            </summary>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.PI(System.Object,System.String)">
+            <summary>
+            Return the value of PI:
+            </summary>
+            <param name="val">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.DATE(System.Object,System.String)">
+            <summary>
+            The DATE() function extracts the date part from a datetime expression.
+            </summary>
+            <param name="val">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.DAY(System.Object,System.String)">
+            <summary>
+            The DAY() function returns the day of the month for a given date (a number from 1 to 31).
+            </summary>
+            <param name="val">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.DAYNAME(System.Object,System.String)">
+            <summary>
+            The DAYNAME() function returns the weekday name for a given date.
+            </summary>
+            <param name="val">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.DAYOFMONTH(System.Object,System.String)">
+             <summary>
+            The DAYOFMONTH() function returns the day of the month for a given date (a number from 1 to 31).
+             </summary>
+             <param name="val">The value.</param>
+             <param name="Alias">The alias.</param>
+             <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.DAYOFWEEK(System.Object,System.String)">
+            <summary>
+            The DAYOFWEEK() function returns the weekday index for a given date (a number from 1 to 7).
+            </summary>
+            <param name="val">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.DAYOFYEAR(System.Object,System.String)">
+            <summary>
+            The DAYOFYEAR() function returns the day of the year for a given date (a number from 1 to 366).
+            </summary>
+            <param name="val">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.FROM_DAYS(System.Object,System.String)">
+            <summary>
+            The FROM_DAYS() function returns a date from a numeric datevalue.
+            </summary>
+            <param name="val">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.HOUR(System.Object,System.String)">
+             <summary>
+            The HOUR() function returns the hour part for a given date (from 0 to 838).
+             </summary>
+             <param name="val">The value.</param>
+             <param name="Alias">The alias.</param>
+             <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.LAST_DAY(System.Object,System.String)">
+            <summary>
+            The LAST_DAY() function extracts the last day of the month for a given date.
+            </summary>
+            <param name="val">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.MICROSECOND(System.Object,System.String)">
+            <summary>
+              The MICROSECOND() function returns the microsecond part of a time/datetime (from 0 to 999999).
+            </summary>
+            <param name="val">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.MINUTE(System.Object,System.String)">
+            <summary>
+            Minutes the specified value.
+            </summary>
+            <param name="val">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.MONTH(System.Object,System.String)">
+            <summary>
+            The MONTH() function returns the month part for a given date (a number from 1 to 12).
+            </summary>
+            <param name="val">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.MONTHNAME(System.Object,System.String)">
+            <summary>
+            The MONTHNAME() function returns the name of the month for a given date.
+            </summary>
+            <param name="val">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.QUARTER(System.Object,System.String)">
+            <summary>
+            The QUARTER() function returns the quarter of the year for a given date value (a number from 1 to 4).
+            </summary>
+            <param name="val">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.TIME(System.Object,System.String)">
+             <summary>
+            The TIME() function extracts the time part from a given time/datetime.
+             </summary>
+             <param name="val">The value.</param>
+             <param name="Alias">The alias.</param>
+             <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.TIME_TO_SEC(System.Object,System.String)">
+            <summary>
+            The TIME_TO_SEC() function converts a time value into seconds.
+            </summary>
+            <param name="val">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.TO_DAYS(System.Object,System.String)">
+            <summary>
+            The TO_DAYS() function returns the number of days between a date and year 0 (date "0000-00-00").
+            </summary>
+            <param name="date">The date.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.WEEK(System.Object,System.String)">
+            <summary>
+            The WEEK() function returns the week number for a given date (a number from 0 to 53).
+            </summary>
+            <param name="date">The date.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.WEEKDAY(System.Object,System.String)">
+            <summary>
+            The WEEKDAY() function returns the weekday number for a given date.
+            </summary>
+            <param name="date">The date.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.WEEKOFYEAR(System.Object,System.String)">
+            <summary>
+            The WEEKOFYEAR() function returns the week number for a given date (a number from 1 to 53).
+            </summary>
+            <param name="date">The date.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.YEAR(System.Object,System.String)">
+            <summary>
+            The YEAR() function returns the year part for a given date (a number from 1000 to 9999).
+            </summary>
+            <param name="date">The date.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.YEARWEEK(System.Object,System.String)">
+            <summary>
+            The YEARWEEK() function returns the year and week number (a number from 0 to 53) for a given date.
+            </summary>
+            <param name="date">The date.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.BIN(System.Object,System.String)">
+             <summary>
+            The BIN() function returns a binary representation of a number, as a string value.
+             </summary>
+             <param name="number">The number.</param>
+             <param name="Alias">The alias.</param>
+             <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.BINARY(System.Object,System.String)">
+            <summary>
+            The BINARY function converts a value to a binary string.
+            </summary>
+            <param name="number">The number.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.RAND">
+            <summary>
+            Random
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.RADIANS(System.Object,System.String)">
+            <summary>
+            Convert a degree value into radians:
+            </summary>
+            <param name="val">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.SIGN(System.Object,System.String)">
+            <summary>
+            The SIGN() function returns the sign of a number.
+            </summary>
+            <param name="val">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.SQRT(System.Object,System.String)">
+            <summary>
+            The SQRT() function returns the square of a number.
+            </summary>
+            <param name="val">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.SUM(System.Object,System.String)">
+            <summary>
+            The SUM() function calculates the sum of a set of values.
+            </summary>
+            <param name="val">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.SIN(System.Object,System.String)">
+             <summary>
+            The SIN() function returns the sine of a number.
+             </summary>
+             <param name="val">The value.</param>
+             <param name="Alias">The alias.</param>
+             <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.TAN(System.Object,System.String)">
+            <summary>
+            The TAN() function returns the tangent of a number.
+            </summary>
+            <param name="val">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.TRUNCATE(System.Object,System.Object,System.String)">
+            <summary>
+            The TRUNCATE() function truncates a number to the specified number of decimal places.
+            </summary>
+            <param name="val">The value.</param>
+            <param name="val2">The val2.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.DATEDIFF(System.Object,System.Object,System.String)">
+            <summary>
+            Return the number of days between two date values.
+            </summary>
+            <param name="date1">The value.</param>
+            <param name="date2">The val2.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.ADDDATE(System.Object,System.Object,System.String)">
+            <summary>
+            The ADDTIME() function adds a time interval to a time/datetime and then returns the time/datetime.
+            </summary>
+            <param name="date">The value.</param>
+            <param name="days">The val2.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.DATE_SUB(System.Object,System.Object,System.String)">
+            <summary>
+            The DATE_SUB() function subtracts a time/date interval from a date and then returns the date.
+            </summary>
+            <param name="date">The date.</param>
+            <param name="days">The days.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.MAKEDATE(System.Object,System.Object,System.String)">
+             <summary>
+            The MAKEDATE() function creates and returns a date based on a year and a number of days value.
+             </summary>
+             <param name="date">The date.</param>
+             <param name="days">The days.</param>
+             <param name="Alias">The alias.</param>
+             <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.MAKETIME(System.Object,System.Object,System.Object,System.String)">
+            <summary>
+            The MAKETIME() function creates and returns a time based on an hour, minute, and second value.
+            </summary>
+            <param name="hour">The hour.</param>
+            <param name="minute">The minute.</param>
+            <param name="second">The second.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.PERIOD_ADD(System.Object,System.Object,System.String)">
+            <summary>
+            The PERIOD_ADD() function adds a specified number of months to a period.
+            </summary>
+            <param name="period">The period.</param>
+            <param name="number">The number.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.PERIOD_DIFF(System.Object,System.Object,System.String)">
+             <summary>
+            The PERIOD_DIFF() function returns the difference between two periods. The result will be in months.
+             </summary>
+             <param name="period1">The period1.</param>
+             <param name="period2">The period2.</param>
+             <param name="Alias">The alias.</param>
+             <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.STR_TO_DATE(System.Object,System.Object,System.String)">
+            <summary>
+            The STR_TO_DATE() function returns a date based on a string and a format.
+            </summary>
+            <param name="period1">The period1.</param>
+            <param name="period2">The period2.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.TIME_FORMAT(System.Object,System.Object,System.String)">
+             <summary>
+            The TIME_FORMAT() function formats a time by a specified format.
+             </summary>
+             <param name="date_time">The period1.</param>
+             <param name="format">The period2.</param>
+             <param name="Alias">The alias.</param>
+             <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.TIMEDIFF(System.Object,System.Object,System.String)">
+             <summary>
+            The TIMEDIFF() function returns the difference between two time/datetime expressions.
+             </summary>
+             <param name="time1">The time1.</param>
+             <param name="time2">The time2.</param>
+             <param name="Alias">The alias.</param>
+             <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.TIMESTAMP(System.Object,System.Object,System.String)">
+            <summary>
+            The TIMESTAMP() function returns a datetime value based on a date or datetime value.
+            </summary>
+            <param name="date">The date.</param>
+            <param name="time">The time.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.DATE_FORMAT(System.Object,System.Object,System.String)">
+            <summary>
+            The DATE_FORMAT() function formats a date as specified.
+            </summary>
+            <param name="date">The date.</param>
+            <param name="format">The format.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.ADDTIME(System.Object,System.Object,System.String)">
+            <summary>
+            Addtimes the specified date.
+            </summary>
+            <param name="date">The date.</param>
+            <param name="seconds">The seconds.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.MOD(System.Object,System.Object,System.String)">
+            <summary>
+            The MOD() function returns the remainder of a number divided by another number.
+            </summary>
+            <param name="val">The value.</param>
+            <param name="val2">The val2.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.ROUND(System.Object,System.Object,System.String)">
+             <summary>
+            The ROUND() function rounds a number to a specified number of decimal places.
+             </summary>
+             <param name="val">The value.</param>
+             <param name="val2">The val2.</param>
+             <param name="Alias">The alias.</param>
+             <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.POWER(System.Object,System.Object,System.String)">
+            <summary>
+            The POW() function returns the value of a number raised to the power of another number.
+            </summary>
+            <param name="val">The value.</param>
+            <param name="val2">The val2.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.GREATEST(System.Object[],System.String)">
+            <summary>
+            The GREATEST() function returns the greatest value of the list of arguments.
+            </summary>
+            <param name="vals">The vals.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.LEAST(System.Object[],System.String)">
+            <summary>
+            The LEAST() function returns the smallest value of the list of arguments.
+            </summary>
+            <param name="vals">The vals.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.LOWER(System.Object)">
+            <summary>
+            Convert the text to lower-case
+            </summary>
+            <param name="val">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.LTRIM(System.Object)">
+            <summary>
+            Remove leading spaces from a string
+            </summary>
+            <param name="val">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.CHAR_LENGTH(System.Object,System.String)">
+            <summary>
+            Returns the length of a string (in characters)
+            </summary>
+            <param name="val">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.CHARACTER_LENGTH(System.Object,System.String)">
+            <summary>
+            Returns the length of a string (in characters)
+            </summary>
+            <param name="val">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.REVERSE(System.Object,System.String)">
+            <summary>
+            Reverses a string and returns the result.
+            </summary>
+            <param name="val">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.RTRIM(System.Object)">
+            <summary>
+            The RTRIM() function removes trailing spaces from a string.
+            </summary>
+            <param name="val">The value.</param> 
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.CONCAT(System.Object,System.Object,System.String)">
+            <summary>
+            Adds two or more expressions together
+            </summary>
+            <param name="expression1">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.STRCMP(System.Object,System.Object,System.String)">
+            <summary>
+            The STRCMP() function compares two strings.
+            </summary>
+            <param name="string1">The string1.</param>
+            <param name="string2">The string2.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.RIGHT(System.Object,System.Object,System.String)">
+            <summary>
+            extracts a number of characters from a string (starting from right).
+            </summary>
+            <param name="string_">The string.</param>
+            <param name="number_of_chars">The number of chars.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.MID(System.Object,System.Object,System.Object,System.String)">
+            <summary>
+            The MID() function extracts a substring from a string (starting at any position).
+            </summary>
+            <param name="string_">The string.</param>
+            <param name="statrt">The statrt.</param>
+            <param name="length">The length.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.SUBSTR(System.Object,System.Object,System.Object,System.String)">
+            <summary>
+            The SUBSTR() function extracts a substring from a string (starting at any position).
+            </summary>
+            <param name="string_">The string.</param>
+            <param name="statrt">The statrt.</param>
+            <param name="length">The length.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.SUBSTRING(System.Object,System.Object,System.Object,System.String)">
+            <summary>
+            The SUBSTRING() function extracts a substring from a string (starting at any position).
+            </summary>
+            <param name="string_">The string.</param>
+            <param name="statrt">The statrt.</param>
+            <param name="length">The length.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.SUBSTRING_INDEX(System.Object,System.Object,System.Object,System.String)">
+            <summary>
+            The SUBSTRING_INDEX() function returns a substring of a string before a specified number of delimiter occurs.
+            </summary>
+            <param name="string_">The string.</param>
+            <param name="delimiter">The delimiter.</param>
+            <param name="number">The number.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.RPAD(System.Object,System.Object,System.Object,System.String)">
+            <summary>
+            right-pads a string with another string, to a certain length.
+            </summary>
+            <param name="string_">The string.</param>
+            <param name="length">The length.</param>
+            <param name="rpad_string">The rpad string.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.REPLACE(System.Object,System.Object,System.Object,System.String)">
+            <summary>
+             Replaces all occurrences of a substring within a string, with a new substring.
+            </summary>
+            <param name="string_">The string.</param>
+            <param name="from_string">From string.</param>
+            <param name="new_string">The new string.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.POSITION(System.Object,System.Object,System.String)">
+            <summary>
+            Returns the position of the first occurrence of a substring in a string
+            </summary>
+            <param name="substring">The substring.</param>
+            <param name="string_">The string.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.REPEAT(System.Object,System.Object,System.String)">
+             <summary>
+            repeats a string as many times as specified.
+             </summary>
+             <param name="substring">The substring.</param>
+             <param name="string_">The string.</param>
+             <param name="Alias">The alias.</param>
+             <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.CONCAT_WS(System.Object,System.Object,System.Object,System.String)">
+            <summary>
+            Adds two or more expressions together with a separator
+            </summary>
+            <param name="expression1">The expression1.</param>
+            <param name="expression2">The expression2.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.FIND_IN_SET(System.Object,System.Object,System.String)">
+            <summary>
+            Returns the position of a string within a list of strings
+            </summary>
+            <param name="inVal">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.INSERT(System.Object,System.Object,System.Object,System.Object,System.String)">
+             <summary>
+            The INSERT() function inserts a string within a string at the specified position and for a certain number of characters.
+             </summary>
+             <param name="string1">The string1.</param>
+             <param name="position">The position.</param>
+             <param name="number">The number.</param>
+             <param name="string2">The string2.</param>
+             <param name="Alias">The alias.</param>
+             <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.INSTR(System.Object,System.Object,System.String)">
+            <summary>
+            returns the position of the first occurrence of a string in another string.
+            </summary>
+            <param name="string1">The string1.</param>
+            <param name="string2">The string2.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.LCASE(System.Object,System.String)">
+             <summary>
+            The LCASE() function converts a string to lower-case.
+             </summary>
+             <param name="val">The value.</param>
+             <param name="Alias">The alias.</param>
+             <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.LEFT(System.Object,System.Object,System.String)">
+            <summary>
+             extracts a number of characters from a string (starting from left).
+            </summary>
+            <param name="string1">The string1.</param>
+            <param name="number_of_chars">The number of chars.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.LENGTH(System.Object,System.String)">
+            <summary>
+            returns the length of a string (in bytes).
+            </summary>
+            <param name="val">The value.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.LOCATE(System.Object,System.Object,System.Object,System.String)">
+            <summary>
+            returns the position of the first occurrence of a substring in a string.
+            </summary>
+            <param name="substring">The substring.</param>
+            <param name="string_">The string.</param>
+            <param name="start">The start.</param>
+            <param name="Alias">The alias.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.IF(System.Object,System.Object,System.Object)">
+            <summary>
+            If condition.
+            </summary>
+            <param name="condition">The condition.</param>
+            <param name="value_if_true">The value if true.</param>
+            <param name="value_if_false">The value if false.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.IFNULL(System.Object,System.Object)">
+            <summary>
+            The IFNULL() function returns a specified value if the expression is NULL.
+            </summary>
+            <param name="expression">The condition.</param>
+            <param name="alt_value">The value if null.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.DbFunctions.ISNULL(System.Object)">
+            <summary>
+            The ISNULL() function returns 1 or 0 depending on whether an expression is NULL.
+            </summary>
+            <param name="expression">The expression.</param>
+            <returns></returns>
+        </member>
+        <member name="T:TooSharp.Core.TsExeptionArgs">
+            <summary>
+            Exception
+            </summary>
+            <seealso cref="T:System.EventArgs" />
+        </member>
+        <member name="M:TooSharp.Core.TsExeptionArgs.#ctor(System.Reflection.PropertyInfo,TooSharp.Core.TsValidationException)">
+            <summary>
+            Initializes a new instance of the <see cref="T:TooSharp.Core.TsExeptionArgs"/> class.
+            </summary>
+            <param name="property">The property.</param>
+            <param name="e">The e.</param>
+        </member>
+        <member name="T:TooSharp.Core.Kuto">
+            <summary>
+            Class ExtractDoc.
+            </summary>
+        </member>
+        <member name="F:TooSharp.Core.Kuto.throwExcepions">
+            <summary>
+            The throw excepions
+            </summary>
+        </member>
+        <member name="F:TooSharp.Core.Kuto.doc">
+            <summary>
+            The document
+            </summary>
+        </member>
+        <member name="M:TooSharp.Core.Kuto.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:TooSharp.Core.Kuto" /> class.
+        Initializes a new instance of the  class.
+            </summary>
+            <param name="ExtractSring">The extract sring.</param>
+            <exception cref="T:System.Exception">String empty</exception>
+        </member>
+        <member name="M:TooSharp.Core.Kuto.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+        Returns a  that represents this instance.
+            </summary>
+            <returns>A <see cref="T:System.String" /> that represents this instance.
+        A  that represents this instance.</returns>
+        </member>
+        <member name="M:TooSharp.Core.Kuto.Extract(System.String,System.String)">
+            <summary>
+            Extracts the specified start string.
+            </summary>
+            <param name="startString">The start string.</param>
+            <param name="endString">The end string.</param>
+            <returns>System.String.</returns>
+            <exception cref="T:System.Exception">
+            Start string not found
+            or
+            End string not found
+            or
+            Start string poss &gt;= end string possStart string not found
+            or
+            End string not found
+            or
+            Start string poss &gt;= end string poss
+            </exception>
+            <exception cref="T:System.Exception">Start string not found
+            or
+            End string not found
+            or
+            Start string poss &gt;= end string poss</exception>
+        </member>
+        <member name="M:TooSharp.Core.Kuto.Extract(TooSharp.Core.ScrapRule)">
+            <summary>
+            Extracts the specified rule.
+            </summary>
+            <param name="Rule">The rule.</param>
+            <returns>ExtractDoc.</returns>
+        </member>
+        <member name="M:TooSharp.Core.Kuto.Contains(System.String)">
+            <summary>
+            Determines whether [contains] [the specified needle].
+            </summary>
+            <param name="needle">The needle.</param>
+            <returns><c>truefalse</c> if [contains] [the specified needle]; otherwise, <c>false</c>.
+        if [contains] [the specified needle]; otherwise, .</returns>
+        </member>
+        <member name="M:TooSharp.Core.Kuto.Scrap(System.Collections.Generic.List{TooSharp.Core.ScrapRule},System.Boolean)">
+            <summary>
+            Scraps the specified column rules.
+            </summary>
+            <param name="ColumnRules">The column rules.</param>
+            <param name="Reduce">if set to <c>true</c> [reduce].
+        if set to  [reduce].</param>
+            <returns>List&lt;ExtractDoc&gt;.</returns>
+        </member>
+        <member name="M:TooSharp.Core.Kuto.Scrap(System.String,System.Collections.Generic.List{TooSharp.Core.ScrapRule})">
+            <summary>
+            Scraps the specified condition.
+            </summary>
+            <param name="Condition">The condition.</param>
+            <param name="ColumnRules">The column rules.</param>
+            <returns>List&lt;List&lt;ExtractDoc&gt;&gt;.</returns>
+        </member>
+        <member name="T:TooSharp.Core.ScrapRule">
+            <summary>
+            Class ScrapRule.
+            </summary>
+        </member>
+        <member name="F:TooSharp.Core.ScrapRule.startString">
+            <summary>
+            The start string
+            </summary>
+        </member>
+        <member name="F:TooSharp.Core.ScrapRule.endString">
+            <summary>
+            The end string
+            </summary>
+        </member>
+        <member name="M:TooSharp.Core.ScrapRule.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:TooSharp.Core.ScrapRule"/> class.
+        Initializes a new instance of the  class.
+            </summary>
+            <param name="StartString">The start string.</param>
+            <param name="EndString">The end string.</param>
+        </member>
+        <member name="E:TooSharp.Core.TSmodel.onValidationError">
+            <summary>
+            Occurs when [validation error hapens].
+            </summary>
+        </member>
+        <member name="M:TooSharp.Core.TSmodel.Delete">
+            <summary>
+            Deletes this instance.
+            </summary>
+        </member>
+        <member name="M:TooSharp.Core.TSmodel.Save">
+            <summary>
+            Saves this instance.
+            </summary>
+        </member>
+        <member name="M:TooSharp.Core.TSmodel.update">
+            <summary>
+            Updates this instance.
+            </summary>
+        </member>
+        <member name="M:TooSharp.Core.TSmodel.Insert">
+            <summary>
+            Inserts this instance.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TooSharp.Core.ObjectMapper.DataTableToList``1(System.Data.DataTable)">
+            <summary>
+            Converts a DataTable to a list with generic objects
+            </summary>
+            <typeparam name="T">Generic object</typeparam>
+            <param name="table">DataTable</param>
+            <returns>List with generic objects</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,28 @@
+c:\users\gabri\onedrive\documentos\visual studio 2015\Projects\ContatosDS\ContatosDS\bin\Debug\ContatosDS.exe.config
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\ContatosDS\ContatosDS\obj\Debug\ContatosDS.csprojResolveAssemblyReference.cache
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\ContatosDS\ContatosDS\obj\Debug\ContatosDS.FrmAddEditContato.resources
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\ContatosDS\ContatosDS\obj\Debug\ContatosDS.Form1.resources
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\ContatosDS\ContatosDS\obj\Debug\ContatosDS.Properties.Resources.resources
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\ContatosDS\ContatosDS\obj\Debug\ContatosDS.csproj.GenerateResource.Cache
+C:\Users\gabri\onedrive\documentos\visual studio 2015\Projects\ContatosDS\ContatosDS\bin\Debug\ContatosDS.exe
+C:\Users\gabri\onedrive\documentos\visual studio 2015\Projects\ContatosDS\ContatosDS\bin\Debug\ContatosDS.pdb
+C:\Users\gabri\onedrive\documentos\visual studio 2015\Projects\ContatosDS\ContatosDS\bin\Debug\TooSharp.Core.dll
+C:\Users\gabri\onedrive\documentos\visual studio 2015\Projects\ContatosDS\ContatosDS\bin\Debug\MySql.Data.dll
+C:\Users\gabri\onedrive\documentos\visual studio 2015\Projects\ContatosDS\ContatosDS\bin\Debug\Humanizer.dll
+C:\Users\gabri\onedrive\documentos\visual studio 2015\Projects\ContatosDS\ContatosDS\bin\Debug\TooSharp.Core.xml
+C:\Users\gabri\onedrive\documentos\visual studio 2015\Projects\ContatosDS\ContatosDS\obj\Debug\ContatosDS.exe
+C:\Users\gabri\onedrive\documentos\visual studio 2015\Projects\ContatosDS\ContatosDS\obj\Debug\ContatosDS.pdb
+C:\Users\gabri\Desktop\Senai\PIT\ContatosDS\bin\Debug\ContatosDS.exe.config
+C:\Users\gabri\Desktop\Senai\PIT\ContatosDS\bin\Debug\ContatosDS.exe
+C:\Users\gabri\Desktop\Senai\PIT\ContatosDS\bin\Debug\ContatosDS.pdb
+C:\Users\gabri\Desktop\Senai\PIT\ContatosDS\bin\Debug\TooSharp.Core.dll
+C:\Users\gabri\Desktop\Senai\PIT\ContatosDS\bin\Debug\MySql.Data.dll
+C:\Users\gabri\Desktop\Senai\PIT\ContatosDS\bin\Debug\Humanizer.dll
+C:\Users\gabri\Desktop\Senai\PIT\ContatosDS\bin\Debug\TooSharp.Core.xml
+C:\Users\gabri\Desktop\Senai\PIT\ContatosDS\obj\Debug\ContatosDS.csprojResolveAssemblyReference.cache
+C:\Users\gabri\Desktop\Senai\PIT\ContatosDS\obj\Debug\ContatosDS.FrmAddEditContato.resources
+C:\Users\gabri\Desktop\Senai\PIT\ContatosDS\obj\Debug\ContatosDS.Form1.resources
+C:\Users\gabri\Desktop\Senai\PIT\ContatosDS\obj\Debug\ContatosDS.Properties.Resources.resources
+C:\Users\gabri\Desktop\Senai\PIT\ContatosDS\obj\Debug\ContatosDS.csproj.GenerateResource.Cache
+C:\Users\gabri\Desktop\Senai\PIT\ContatosDS\obj\Debug\ContatosDS.exe
+C:\Users\gabri\Desktop\Senai\PIT\ContatosDS\obj\Debug\ContatosDS.pdb
