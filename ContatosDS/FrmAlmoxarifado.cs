@@ -8,52 +8,57 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TooSharp.Models;
+
 namespace ContatosDS
 {
-    public partial class Form1 : Form
+    public partial class FrmAlmoxarifado : Form
     {
-        public Form1()
+        public FrmAlmoxarifado()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void FrmAlmoxarifado_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void table_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new FrmAddEditContato().ShowDialog();
+            new FrmAddEditProdutos().ShowDialog();
             ReloadData();
         }
+
         void ReloadData()
         {
             if (textBox1.Text.Trim().Length > 0)
             {
                 //serch data
-                PopulateData(Contatos.Records()
-                    .Where(Contatos.COLUMNS.Nome, "LIKE", "%" + textBox1.Text + "%")
+                PopulateData(Almoxarifados.Records()
+                    .Where(Almoxarifados.COLUMNS.Produto, "LIKE", "%" + textBox1.Text + "%")
                     .Get());
             }
             else
             {
                 //fetch all data
-                PopulateData(Contatos.Records().Get());
+                PopulateData(Almoxarifados.Records().Get());
             }
         }
-        void PopulateData(IEnumerable<Contato> Contrato)
+
+        void PopulateData(IEnumerable<Almoxarifado> Almoxarifado)
         {
             table.Rows.Clear();
-            foreach (var c in Contrato)
+            foreach (var c in Almoxarifado)
             {
                 table.Rows.Add(new object[]{
-                    c.ID,
-                    c.Nome,
-                    c.Sobrenome,
-                    c.Email,
-                    c.Celular,
-                    c.CNPJ,
+                    c.Codigo,
+                    c.Produto,
+                    c.Quantidade,
                     "Edit",
                     "Delete"
                 });
@@ -61,18 +66,17 @@ namespace ContatosDS
             }
         }
 
-        private void table_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void table_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             ReloadData();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            
             ReloadData();
         }
 
-        private void Form1_Shown(object sender, EventArgs e)
+        private void FrmAlmoxarifado_Shown(object sender, EventArgs e)
         {
             ReloadData();
         }
@@ -83,27 +87,22 @@ namespace ContatosDS
             ReloadData();
         }
 
-        private void table_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void table_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 6) //edit
+            if (e.ColumnIndex == 3) //edit
             {
-                new FrmAddEditContato((Contato)table.CurrentRow.Tag).ShowDialog();
+                new FrmAddEditProdutos((Almoxarifado)table.CurrentRow.Tag).ShowDialog();
                 ReloadData();
             }
-            if (e.ColumnIndex == 7) //delete
+            if (e.ColumnIndex == 4) //delete
             {
-                Contato contatos = (Contato)table.CurrentRow.Tag;
-                if (MessageBox.Show("Delete " + contatos.Nome + "?", "CONFIRM", MessageBoxButtons.YesNoCancel) == DialogResult.Yes)
+                Almoxarifado almoxarifados = (Almoxarifado)table.CurrentRow.Tag;
+                if (MessageBox.Show("Delete " + almoxarifados.Produto + "?", "CONFIRM", MessageBoxButtons.YesNoCancel) == DialogResult.Yes)
                 {
-                    contatos.Delete();
+                    almoxarifados.Delete();
                     ReloadData();
                 }
             }
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            new FrmAlmoxarifado().ShowDialog();
         }
     }
 }

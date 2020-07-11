@@ -1,6 +1,6 @@
 ﻿namespace ContatosDS
 {
-    partial class Form1
+    partial class FrmAlmoxarifado
     {
         /// <summary>
         /// Required designer variable.
@@ -28,31 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAlmoxarifado));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.table = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.editar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.deletar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.table)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -62,8 +58,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(934, 100);
-            this.panel1.TabIndex = 0;
+            this.panel1.Size = new System.Drawing.Size(917, 85);
+            this.panel1.TabIndex = 2;
             // 
             // label1
             // 
@@ -72,9 +68,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(31, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 35);
+            this.label1.Size = new System.Drawing.Size(211, 35);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Contato";
+            this.label1.Text = "Almoxarifado";
             // 
             // panel2
             // 
@@ -82,31 +78,89 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.table);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.table);
-            this.panel2.Location = new System.Drawing.Point(12, 120);
+            this.panel2.Location = new System.Drawing.Point(7, 104);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(910, 366);
-            this.panel2.TabIndex = 1;
+            this.panel2.TabIndex = 3;
             // 
-            // button3
+            // table
             // 
-            this.button3.AutoSize = true;
-            this.button3.BackColor = System.Drawing.Color.Tomato;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(353, 16);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(133, 28);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Almoxarifado";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.table.AllowUserToAddRows = false;
+            this.table.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.table.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.table.BackgroundColor = System.Drawing.Color.White;
+            this.table.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.editar,
+            this.deletar});
+            this.table.Location = new System.Drawing.Point(25, 80);
+            this.table.Name = "table";
+            this.table.ReadOnly = true;
+            this.table.RowHeadersVisible = false;
+            this.table.Size = new System.Drawing.Size(854, 274);
+            this.table.TabIndex = 5;
+            this.table.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_CellClick_1);
+            this.table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_CellContentClick);
+            // 
+            // Column1
+            // 
+            this.Column1.FillWeight = 30F;
+            this.Column1.HeaderText = "Codigo";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Produto";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Quantidade";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // editar
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkGreen;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkGreen;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.editar.DefaultCellStyle = dataGridViewCellStyle2;
+            this.editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editar.HeaderText = "";
+            this.editar.Name = "editar";
+            this.editar.ReadOnly = true;
+            this.editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.editar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // deletar
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Tomato;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Tomato;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.deletar.DefaultCellStyle = dataGridViewCellStyle3;
+            this.deletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deletar.HeaderText = "";
+            this.deletar.Name = "deletar";
+            this.deletar.ReadOnly = true;
+            this.deletar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.deletar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // button2
             // 
@@ -152,122 +206,26 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 28);
             this.button1.TabIndex = 1;
-            this.button1.Text = "Novo";
+            this.button1.Text = "Add Produto";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // table
-            // 
-            this.table.AllowUserToAddRows = false;
-            this.table.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.table.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.table.BackgroundColor = System.Drawing.Color.White;
-            this.table.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.editar,
-            this.deletar});
-            this.table.Location = new System.Drawing.Point(25, 64);
-            this.table.Name = "table";
-            this.table.ReadOnly = true;
-            this.table.RowHeadersVisible = false;
-            this.table.Size = new System.Drawing.Size(854, 274);
-            this.table.TabIndex = 0;
-            this.table.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_CellClick);
-            this.table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_CellContentClick);
-            // 
-            // Column1
-            // 
-            this.Column1.FillWeight = 30F;
-            this.Column1.HeaderText = "Id";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Nome";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Sobrenome";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Email";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Celular";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "CNPJ";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // editar
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkGreen;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkGreen;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            this.editar.DefaultCellStyle = dataGridViewCellStyle2;
-            this.editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editar.HeaderText = "";
-            this.editar.Name = "editar";
-            this.editar.ReadOnly = true;
-            this.editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.editar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // deletar
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Tomato;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Tomato;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.deletar.DefaultCellStyle = dataGridViewCellStyle3;
-            this.deletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deletar.HeaderText = "";
-            this.deletar.Name = "deletar";
-            this.deletar.ReadOnly = true;
-            this.deletar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.deletar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Form1
+            // FrmAlmoxarifado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(934, 498);
+            this.ClientSize = new System.Drawing.Size(917, 542);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "Form1";
-            this.Text = "Contato";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.Shown += new System.EventHandler(this.Form1_Shown);
+            this.Name = "FrmAlmoxarifado";
+            this.Text = "Form2";
+            this.Load += new System.EventHandler(this.FrmAlmoxarifado_Load);
+            this.Shown += new System.EventHandler(this.FrmAlmoxarifado_Shown);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.table)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -277,20 +235,15 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView table;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView table;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewButtonColumn editar;
         private System.Windows.Forms.DataGridViewButtonColumn deletar;
-        private System.Windows.Forms.Button button3;
     }
 }
-

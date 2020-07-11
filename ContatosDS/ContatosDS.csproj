@@ -49,11 +49,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmAddEditContato.cs">
+    <Compile Include="FrmAddEditProdutos.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddEditProdutos.Designer.cs">
+      <DependentUpon>FrmAddEditProdutos.cs</DependentUpon>
     </Compile>
     <Compile Include="TSModels\TSRelationships.cs" />
     <Compile Include="TSModels\Contatos.cs" />
+    <Compile Include="TSModels\Almoxarifados.cs" />
+    <Compile Include="FrmAlmoxarifado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAlmoxarifado.Designer.cs">
+      <DependentUpon>FrmAlmoxarifado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddEditContato.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmAddEditContato.Designer.cs">
       <DependentUpon>FrmAddEditContato.cs</DependentUpon>
     </Compile>
@@ -65,6 +78,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAddEditProdutos.resx">
+      <DependentUpon>FrmAddEditProdutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAlmoxarifado.resx">
+      <DependentUpon>FrmAlmoxarifado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmAddEditContato.resx">
       <DependentUpon>FrmAddEditContato.cs</DependentUpon>
     </EmbeddedResource>

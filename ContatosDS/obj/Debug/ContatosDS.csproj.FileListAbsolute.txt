@@ -26,3 +26,5 @@ C:\Users\gabri\Desktop\Senai\PIT\ContatosDS\obj\Debug\ContatosDS.Properties.Reso
 C:\Users\gabri\Desktop\Senai\PIT\ContatosDS\obj\Debug\ContatosDS.csproj.GenerateResource.Cache
 C:\Users\gabri\Desktop\Senai\PIT\ContatosDS\obj\Debug\ContatosDS.exe
 C:\Users\gabri\Desktop\Senai\PIT\ContatosDS\obj\Debug\ContatosDS.pdb
+C:\Users\gabri\Desktop\Senai\PIT\ContatosDS\obj\Debug\ContatosDS.FrmAlmoxarifado.resources
+C:\Users\gabri\Desktop\Senai\PIT\ContatosDS\obj\Debug\ContatosDS.FrmAddEditProdutos.resources
