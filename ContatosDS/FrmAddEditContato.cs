@@ -15,6 +15,9 @@ namespace ContatosDS
     public partial class FrmAddEditContato : Form
     {
         Contato _Contrato = null;
+        /// <summary>
+        /// Inicia a interface e troca o titulo da interface
+        /// </summary>
         public FrmAddEditContato()
         {
             InitializeComponent();
@@ -22,7 +25,7 @@ namespace ContatosDS
         }
 
         /// <summary>
-        /// Conecção com o Banco de Dados
+        /// Alterações no botão de salvar/editar e conecção com o Banco de Dados
         /// </summary>
         /// <param name="contrato"></param>
         public FrmAddEditContato(Contato contrato)
@@ -52,6 +55,11 @@ namespace ContatosDS
             timer1.Start();
         }
 
+        /// <summary>
+        /// Caso ocorra um erro ele para o timer e fecha a interface
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tmrError_Tick(object sender, EventArgs e)
         {
             timer1.Stop();
@@ -60,7 +68,11 @@ namespace ContatosDS
 
         
 
-        // criando e atualizando usando toosharp
+        /// <summary>
+        /// Criando e atualizando o banco de dados usando TooSharp
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
             if (_Contrato == null)
@@ -132,6 +144,11 @@ namespace ContatosDS
 
         
 
+        /// <summary>
+        /// Validação do banco de dados
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Contato_onValidationError(object sender, TooSharp.Core.TsExeptionArgs e)
         {
             ShowError(e.exception.Message);
@@ -179,21 +196,41 @@ namespace ContatosDS
 
         }
 
+        /// <summary>
+        /// Limitando o usuario a apenas colocar numero
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !(char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back);
         }
 
+        /// <summary>
+        /// Limitando o usuario a apenas colocar numero
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
         {            
             e.Handled = !(char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back);
         }
 
+        /// <summary>
+        /// Limitando o usuario a apenas colocar letras
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {                
             e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
         }
 
+        /// <summary>
+        /// Limitando o usuario a apenas colocar letras
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
@@ -210,6 +247,11 @@ namespace ContatosDS
             
         }
 
+        /// <summary>
+        /// Limitando o usuario a apenas colocar um email valido
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void textBox3_Validated(object sender, EventArgs e)
         {
             string text = textBox3.Text;

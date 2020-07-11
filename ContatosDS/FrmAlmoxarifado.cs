@@ -28,12 +28,20 @@ namespace ContatosDS
 
         }
 
+        /// <summary>
+        /// Abrir o painel para cadastrar o produto
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             new FrmAddEditProdutos().ShowDialog();
             ReloadData();
         }
 
+        /// <summary>
+        /// Função para procurar os dados cadastrados
+        /// </summary>
         void ReloadData()
         {
             if (textBox1.Text.Trim().Length > 0)
@@ -50,6 +58,10 @@ namespace ContatosDS
             }
         }
 
+        /// <summary>
+        /// Puxando os categorias da tabela e criando uma ligação com banco de dados
+        /// </summary>
+        /// <param name="Almoxarifado"></param>
         void PopulateData(IEnumerable<Almoxarifado> Almoxarifado)
         {
             table.Rows.Clear();
@@ -66,27 +78,52 @@ namespace ContatosDS
             }
         }
 
+        /// <summary>
+        /// Regarrega automatico para a aparição dos dados na tabela
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void table_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             ReloadData();
         }
 
+        /// <summary>
+        /// Botão de busca do contato
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             ReloadData();
         }
 
+        /// <summary>
+        /// Regarrega automatico para a aparição dos dados na tabela
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FrmAlmoxarifado_Shown(object sender, EventArgs e)
         {
             ReloadData();
         }
 
+        /// <summary>
+        /// Recarregar o painel caso não tenha aparecido o produto novo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
             textBox1.Text = "";
             ReloadData();
         }
 
+        /// <summary>
+        /// Função dos 2 botões que tem na tabela Editar/Delete
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void table_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 3) //edit

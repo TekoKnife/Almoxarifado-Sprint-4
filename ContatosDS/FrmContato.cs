@@ -22,16 +22,25 @@ namespace ContatosDS
 
         }
 
+        /// <summary>
+        /// Abrir o painel para cadastrar o cliente
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             new FrmAddEditContato().ShowDialog();
             ReloadData();
         }
+
+        /// <summary>
+        /// Função para procurar os dados cadastrados
+        /// </summary>
         void ReloadData()
         {
             if (textBox1.Text.Trim().Length > 0)
             {
-                //serch data
+                //procurar data
                 PopulateData(Contatos.Records()
                     .Where(Contatos.COLUMNS.Nome, "LIKE", "%" + textBox1.Text + "%")
                     .Get());
@@ -42,6 +51,11 @@ namespace ContatosDS
                 PopulateData(Contatos.Records().Get());
             }
         }
+
+        /// <summary>
+        /// Puxando os categorias da tabela e criando uma ligação com banco de dados
+        /// </summary>
+        /// <param name="Contrato"></param>
         void PopulateData(IEnumerable<Contato> Contrato)
         {
             table.Rows.Clear();
@@ -61,28 +75,52 @@ namespace ContatosDS
             }
         }
 
+        /// <summary>
+        /// Regarrega automatico para a aparição dos dados na tabela
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void table_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             ReloadData();
         }
 
+        /// <summary>
+        /// Botão de busca do contato
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            
+        { 
             ReloadData();
         }
 
+        /// <summary>
+        /// Regarrega automatico para a aparição dos dados na tabela
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Form1_Shown(object sender, EventArgs e)
         {
             ReloadData();
         }
 
+        /// <summary>
+        /// Recarregar o painel caso não tenha aparecido o contato novo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
             textBox1.Text = "";
             ReloadData();
         }
 
+        /// <summary>
+        /// Função dos 2 botões que tem na tabela Editar/Delete
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void table_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 6) //edit
@@ -101,6 +139,11 @@ namespace ContatosDS
             }
         }
 
+        /// <summary>
+        /// Abrir o painel do Almoxarifado 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button3_Click(object sender, EventArgs e)
         {
             new FrmAlmoxarifado().ShowDialog();

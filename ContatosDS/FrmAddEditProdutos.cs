@@ -15,12 +15,19 @@ namespace ContatosDS
     public partial class FrmAddEditProdutos : Form
     {
         Almoxarifado _Almoxarifado = null;
+        /// <summary>
+        /// Inicia a interface e muda o titulo
+        /// </summary>
         public FrmAddEditProdutos()
         {
             InitializeComponent();
             label1.Text = "Add Produto";
         }
 
+        /// <summary>
+        /// Alterações no botão de salvar/editar e conecção com o banco de dados
+        /// </summary>
+        /// <param name="almoxarifado"></param>
         public FrmAddEditProdutos(Almoxarifado almoxarifado)
         {
             InitializeComponent();
@@ -34,6 +41,10 @@ namespace ContatosDS
             textBox2.Text = _Almoxarifado.Quantidade;
             
         }
+        /// <summary>
+        /// Para mostrar o erro e tempo que aconteceu
+        /// </summary>
+        /// <param name="Text"></param>
         void ShowError(string Text)
         {
             label7.Text = Text;
@@ -41,6 +52,11 @@ namespace ContatosDS
             timer1.Start();
         }
 
+        /// <summary>
+        /// Caso ocorra um erro ele para o timer e fecha a interface
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tmrError_Tick(object sender, EventArgs e)
         {
             timer1.Stop();
@@ -53,6 +69,11 @@ namespace ContatosDS
 
         }
 
+        /// <summary>
+        /// Criando e atualizando o banco de dados usando TooSharp
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
             if (_Almoxarifado == null)
@@ -102,19 +123,40 @@ namespace ContatosDS
                 }
             }
         }
+
+        /// <summary>
+        /// Validação do banco de dados
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Almoxarifado_onValidationError(object sender, TooSharp.Core.TsExeptionArgs e)
         {
             ShowError(e.exception.Message);
         }
 
+        /// <summary>
+        /// Limitando o usuario a apenas colocar letras
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
         }
 
+        /// <summary>
+        /// Limitando o usuario a apenas colocar numero
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !(char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
