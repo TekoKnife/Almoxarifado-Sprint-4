@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="estilo'-'.css">
 </head>
 <body>
+    <!-- Este form define o metodo do formulário. -->
     <form class="formulario" method="post">
         <?php
             //Esse código em php salva as informções do usuário no servidor 
@@ -84,6 +85,7 @@
         <input type="submit" name="acao" value="Enviar">
     </form>
 </body>
+<!-- Este scrpit define que so poderão ser utilizados números em certos campos. -->
 <script language='JavaScript'>
     function SomenteNumero(e){
         var tecla=(window.event)?event.keyCode:e.which;   
@@ -94,5 +96,4 @@
                 }
     }
 </script>
- 
 </html>
