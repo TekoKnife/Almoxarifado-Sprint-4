@@ -7,10 +7,10 @@
 </head>
 <body>
     <form class="formulario" method="post">
-        
-    
         <?php
-            if (isset($_POST["acao"])){
+            //Esse código em php salva as informções do usuário no servidor 
+             if (isset($_POST["acao"]))
+            {
                 $nome=$_POST["nome"];
                 $telefone=$_POST["telefone"];
                 $email=$_POST["email"];
@@ -26,7 +26,8 @@
             }
         ?>
         <p><b> Envie uma mensagem preenchendo o formulário abaixo </b></p>
-
+            
+        <!-- Essa parte do código que está em Html é onde o usuário insere suas informações -->
         <div class="field">
             <label for="nome"><b>Seu nome:</b></label>
             <input type="text" id="nome" name="nome" placeholder="Digite seu nome*" required="">

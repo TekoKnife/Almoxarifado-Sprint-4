@@ -12,7 +12,7 @@
 		</b>	
 	</h1>
 		<form action="Script_do_Formulario.php" method="post">
-		<!-- DADOS PESSOAIS-->
+		<!-- DADOS PESSOAIS, onde o usuário insere os seus dados pessoais e o nome de sua empresa. -->
 		<fieldset>
 			<legend><strong>Dados Pessoais</strong></legend>
 			<table cellspacing="10">
@@ -68,7 +68,7 @@
 				</tr>
 			</table>
 		</fieldset>
-		<!-- Endereço -->
+		<!-- ENDEREÇO, onde o usuário insere a localização de ua empresa. -->
 		<fieldset>
 			<legend><strong>Dados de Endereço</strong></legend>
 			<table cellspacing="10">
@@ -151,7 +151,7 @@
  		</table>
 	</fieldset>
 			<br />
-<!-- DADOS DE LOGIN -->
+	<!-- DADOS DE LOGIN, onde o usuário insere seus dados de login -->
 	<fieldset>
  		<legend><strong>Dados de login</strong></legend>
  		<table cellspacing="10">
@@ -205,6 +205,7 @@
 			</table>
 		</fieldset> 
 	</form>
+	<!-- Esse script serve para empedir q o usuário coloque letras nos campos que so podem ser inseridos números. -->
 	<script language='JavaScript'>
 		function SomenteNumero(e){
 			var tecla=(window.event)?event.keyCode:e.which;   
